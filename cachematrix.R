@@ -41,7 +41,7 @@ cacheSolve <- function(mtx, ...) {
   ## Get the inverse from the object (if not cached value is null)
   inv <- mtx$getInverse()
   
-  ## Return the inverse that is already cached (a matrix that is the inverse of 'x')
+  ## Return the inverse that is already cached (a matrix that is the inverse of 'mtx')
   if(!is.null(inv)) {
     message("Getting cached data.")
     return(inv)
@@ -56,6 +56,6 @@ cacheSolve <- function(mtx, ...) {
   ## Set the inverse in the object
   mtx$setInverse(inv)
   
-  ## Return the calculated inversed (a matrix that is the inverse of 'x')
+  ## Return the calculated inversed (a matrix that is the inverse of 'mtx')
   return(inv)
 }
